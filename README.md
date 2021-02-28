@@ -76,4 +76,5 @@ I did not explore creating new features with the data set. After running the ben
 
 ## Proof of cluster clean up
 
+![image](https://user-images.githubusercontent.com/6833720/109432447-1fda1600-79c0-11eb-8856-6b1736c85463.png)
 
