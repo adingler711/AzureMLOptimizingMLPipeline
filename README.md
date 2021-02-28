@@ -6,7 +6,7 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-This dataset contains data about individuals who have been interesting in the banks services. The opportunity at hand is to see if we can identify  patterns in individuals that subscribed to the bank's services. 
+This dataset contains data about individuals who have been interesting in the banks services. The opportunity at hand is to see if we can identify patterns in individuals that subscribed to the bank's services. 
 
 When building a model there were two approaches used:
 1) A logistic regression model using hyperdrive to optimize C and max iteration
@@ -46,7 +46,7 @@ automl_config = AutoMLConfig(
     n_cross_validations=3)
 ```
 
-The configuation parameters mean that experiement will time out after 30 minutes if it has not already terminated. It will only evaluate classification models using accuracy as its elvuation criteria. The training data is a tabular data set called ds. In the data set the variable the model will predict is called 'y' and the data used from training is split into the cross validation data sets.
+The configuation parameters mean that experiement will time out after 30 minutes if it has not already terminated. It will only evaluate classification models using accuracy as its elvuation criteria. The training data is a tabular data set called ds. In the data set the variable the model will predict is called 'y' and the data used from training is split into the cross validation data sets. The best performing autoML model is a VotingEnsemble model with a standard scaller as a preprocessing step.
 
 
 ## Pipeline comparison
