@@ -61,6 +61,7 @@ The table below has the metrics from the best model for each approach. The accur
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
 **Data Balance Issues**
+
 The data is extermely imblanced which is evident by some of the metric the autoML returned with the best performing model. The accuracy of the model was 0.91 but when you calcualte the balanced accuracy it drops to 0.749. This occurs because the model has gotten pretty good at predicting the majority class and does not do so well on the minority class. 
 
 Class imbalance is a very common issue in the business world were the business usually wants to know when the unusall thing occurs and not the majority class. There are a few solutions to get around this issue.
@@ -70,6 +71,7 @@ In the autoML config, we could change the metric used from a simple 'accuracy' t
 Besides just changinging the metric used to find the best performing model you would also over sample the minority class or down sample the majority class so the data used to train the model is more balanced  and one class does not dominate the other.
 
 **Feature Creation**
+
 I did not explore creating new features with the data set. After running the benchmark model, you could explore the feature importance to each class and try to create features that help explain the variance for the minority class.
 
 ## Proof of cluster clean up
