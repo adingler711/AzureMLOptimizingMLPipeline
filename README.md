@@ -31,7 +31,7 @@ The hyperdrive architecture will randomly draw parameter options from the specif
 
 A benefit of using the bandit policy is that it will automatically terminate runs that are not producing good results and only keep the best performing runs that are withing the allowed slack factor.
 
-The data consist of both continuous and categorical variables. The categorical variables are converted differently
+The data consist of continuous and categorical variables. In the train preprocessing step, the categorical variables are converted to:
 - The months variables is decode to their respective monthly value;, i.e., Jan: 1
 - The week gets its corresponding week values; i.e., mon: 1
 - The diferent job, contact and education values are converted to binary dummy variables
