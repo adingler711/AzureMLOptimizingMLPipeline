@@ -50,8 +50,9 @@ automl_config = AutoMLConfig(
     n_cross_validations=3)
 ```
 
-The configuation parameters mean that experiement will time out after 30 minutes if it has not already terminated. It will only evaluate classification models using accuracy as its elvuation criteria. The training data is a tabular data set called ds. In the data set the variable the model will predict is called 'y' and the data used from training is split into the cross validation data sets. The best performing autoML model is a VotingEnsemble model with a standard scaller as a preprocessing step.
+The configuation parameters mean that experiement will time out after 30 minutes if it has not already terminated. It will only evaluate classification models using accuracy as its elvuation criteria. The training data is a tabular data set called ds. In the data set the variable the model will predict is called 'y' and the data used from training is split into the cross validation data sets. 
 
+The best performing autoML model is a VotingEnsemble model with a standard scaller as a preprocessing step. The cool feature about the autoML ensemble models is that it does not retrain the models. It uses a soft-voting which uses weighted averages from the models that have already been trained. This means the ensemble model uses a hybrid approach by combining the results from XGBoostClassifier, ExtremeRandomTrees and RandomForest. It builds a tree using 25 estimators on the predicted Y values.
 
 ## Pipeline comparison
 
